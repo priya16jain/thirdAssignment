@@ -1,0 +1,23 @@
+package assignment3automatiom.ExcelReadtest;
+import java.util.Scanner;
+
+public class GetInputFromUser {
+	public static void main(String args[]){ 
+		String Firstname;
+		String Lastname;
+
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Enter Firstname");
+		Firstname = in.nextLine();
+		System.out.println("You entered " + Firstname);
+
+		System.out.println("Enter a Lastname");
+		Lastname = in.nextLine();
+		System.out.println("You entered " + Lastname);
+
+	}
+
+}
+
+

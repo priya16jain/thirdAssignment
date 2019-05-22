@@ -1,0 +1,11 @@
+package assignment3automatiom.ExcelReadtest;
+import java.util.Scanner;
+
+public class GetInputFromUser {
+	public static void main(String args[]){ 
+		
+	}
+
+}
+
+

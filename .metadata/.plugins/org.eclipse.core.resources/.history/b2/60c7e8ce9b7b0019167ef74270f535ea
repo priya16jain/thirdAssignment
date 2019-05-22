@@ -1,0 +1,20 @@
+package ExcelFile;
+import java.util.Scanner;
+
+class GetInputFromUser
+{
+	public static void main(String args[]){ 
+		String Firstname;
+		String Lastname;
+
+      Scanner in = new Scanner(System.in);
+
+         System.out.println("Enter Firstname");
+		Firstname = in.nextLine();
+		System.out.println("You entered " + Firstname);
+
+		System.out.println("Enter a Last");
+		Lastname = in.nextLine();
+		System.out.println("You entered " + Lastname);
+	}
+}

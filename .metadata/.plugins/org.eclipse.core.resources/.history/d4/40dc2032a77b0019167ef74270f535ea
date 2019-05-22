@@ -1,0 +1,39 @@
+package assignment3automatiom.ExcelReadtest;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class WriteDataExcelFile {
+
+	public static void main(String[]args) {
+		try {
+			String filename = "E:\\Users\\readexcel.xlsx" ;
+			XSSFWorkbook workbook = new XSSFWorkbook();
+			XSSFSheet sheet = workbook.createSheet("FirstSheet");  
+
+			XSSFRow rowhead = sheet.createRow((short)0);
+			rowhead.createCell(0).setCellValue("FirstName");
+			rowhead.createCell(1).setCellValue("LastName");
+			rowhead.createCell(2).setCellValue("Email");
+
+
+			XSSFRow row = sheet.createRow((short)1);
+			row.createCell(0).setCellValue("priya");
+			row.createCell(1).setCellValue("jain");
+			row.createCell(3).setCellValue("priya.jain@gmail.com");
+
+			FileOutputStream fileOut = new FileOutputStream(filename);
+			workbook.write(fileOut);
+			fileOut.close();
+			System.out.println("Your excel file has been generated!");
+
+		} catch ( Exception ex ) {
+			System.out.println(ex);
+		}
+	}
+}

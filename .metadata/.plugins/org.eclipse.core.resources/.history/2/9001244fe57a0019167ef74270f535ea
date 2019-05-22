@@ -1,0 +1,29 @@
+package ExcelSheet;
+import java.io.FileInputStream;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class ReadExcelFile {
+
+	public static void main(String[] args) throws Exception{
+
+		//Get the excel file and create an input stream for excel
+		FileInputStream fis = new FileInputStream("E:\\Users\\excelsheet.xlsx");
+
+		//load the input stream to a workbook object
+		//Use XSSF for (.xlsx) excel file and HSSF for (.xls) excel file
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+
+		//get the sheet from the workbook by index
+		XSSFSheet sheet = wb.getSheetAt(0);
+
+
+		//get column count present in the sheet
+		String colcount = sheet.getRow(0).getCell(0).getStringCellValue();
+		System.out.println(" Total number of columns present in the sheet : "+colcount);
+
+		fis.close();
+	}
+}
+

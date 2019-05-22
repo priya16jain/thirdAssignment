@@ -1,0 +1,30 @@
+package ExcelSheet;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadDataFromSheet {
+
+	public static void main(String [] args) throws Exception  {
+		File src = new File("E:\\Users\\Priya.Jain\\ReadExcel.xls");
+		FileInputStream fis = new FileInputStream(src);
+		HSSFWorkbook wb= new HSSFWorkbook(fis); //loaded exel file
+		HSSFSheet Sheet1 = wb.getSheetAt(0);
+		String data0 = Sheet1.getRow(0).getCell(0).getStringCellValue();
+		System.out.println("Data from Excel Sheet"+ data0 );
+		int rowcount  = Sheet1.getLastRowNum();
+		System.out.println("Total rows "+ rowcount+1 );
+		
+		for(int i= 0; i<rowcount; i++) {
+			
+			String data0= sheet1
+			
+		}
+
+	}
+}

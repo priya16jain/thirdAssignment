@@ -1,0 +1,38 @@
+package ExcelFile;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ReadExcelFile {
+	
+	
+	
+
+	 public static void main(String[] args) throws Exception{
+	 //Get the excel file and create an input stream for excel
+	 
+	 FileInputStream fis = new FileInputStream("E:\\Users\\readexcel.xlsx");
+	 
+	 //load the input stream to a workbook object
+	 //Use XSSF for (.xlsx) excel file and HSSF for (.xls) excel file
+	 XSSFWorkbook wb = new XSSFWorkbook(fis);
+	 
+	 //get the sheet from the workbook by index
+	 XSSFSheet sheet = wb.getSheet("0");
+	 
+	 String colcount = sheet.getRow(0).getCell(0).getStringCellValue();
+	 System.out.println(" Total number of columns present in the sheet : "+colcount);
+
+	 
+	 //Count the total number of rows present in the sheet
+	// int rowcount = sheet.getLastRowNum();
+	 //System.out.println(" Total number of rows present in the sheet : "+rowcount);
+	 
+	//close the file input stream
+	 fis.close();
+	 }	 
+}
