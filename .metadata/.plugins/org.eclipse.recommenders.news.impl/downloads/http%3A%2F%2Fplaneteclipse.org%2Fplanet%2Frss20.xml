@@ -69,7 +69,7 @@
 	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://www.eclipse.org/openj9/&quot;&gt;Eclipse OpenJ9&lt;/a&gt; — OpenJ9 is a Java virtual machine (JVM), the engine that runs Java applications, optimized for the cloud and microservices. OpenJ9 comes with improvements to memory overhead and startup times, achieved through shared classes and an aggressive focus on memory footprint.&lt;/p&gt;
 	&lt;/li&gt;
 	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://vertx.io/&quot;&gt;Eclipse Vert.x&lt;/a&gt; — Vert.x is a tool-kit for building reactive applications on the JVM.&lt;/p&gt;
+	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://vertx.io/&quot;&gt;Eclipse Vert.x&lt;/a&gt; — Vert.x is a toolkit for building reactive applications on the JVM.&lt;/p&gt;
 	&lt;/li&gt;
 	&lt;li dir=&quot;ltr&quot;&gt;
 	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://projects.eclipse.org/proposals/eclipse-jemo-cloud-application-runtime&quot;&gt;Eclipse Jemo&lt;/a&gt; — Jemo is the leading open source multi-cloud function-as-a-service (FaaS) runtime for JVM based languages. Built to take advantage of Kubernetes, Jemo provides a platform, frameworks, and runtime support for building cloud native applications which run across multiple clouds without the need for re-engineering.&lt;/p&gt;
