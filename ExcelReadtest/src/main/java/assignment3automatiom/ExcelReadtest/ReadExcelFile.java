@@ -16,24 +16,31 @@ public class ReadExcelFile {
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 
 		XSSFSheet sheet = wb.getSheetAt(0);
-
 		System.out.println(sheet.getRow(0).getCell(0).getStringCellValue());
-		String firstname = sheet.getRow(1).getCell(0).getStringCellValue();
-		System.out.println("Value of firstname  : "+firstname );
 		System.out.println(sheet.getRow(0).getCell(1).getStringCellValue());
-		String lastname = sheet.getRow(1).getCell(1).getStringCellValue();
-		System.out.println(" Value of lastname  : "+ lastname);
+		System.out.println(sheet.getRow(0).getCell(2).getStringCellValue());
 
-		String email= firstname.concat(".").concat(lastname).concat("@gmail.com"); 
-		System.out.println(" Value of email  : "+  email);
+		for(int i =1; ;i++) {
+
+			String firstname = sheet.getRow(i).getCell(0).getStringCellValue();
+			System.out.println("Value of firstname  : "+firstname );
+			
+			String lastname = sheet.getRow(i).getCell(1).getStringCellValue();
+			System.out.println(" Value of lastname  : "+ lastname);
+
+			String email= firstname.concat(".").concat(lastname).concat("@gmail.com"); 
+			System.out.println(" Value of email  : "+  email);
+			
+			XSSFRow rowhead = sheet.createRow((short)1);
+			rowhead.createCell(2).setCellValue(email);
+            sheet.getRow(i).getCell(2).setCellValue(email);
+			
+			fis.close();
+		}
+
 		
-		XSSFRow row = sheet.createRow((short)1);
-		row.createCell(3).setCellValue(email);
-		System.out.println(sheet.getRow(1).getCell(3).getStringCellValue());
-		fis.close();
 	}
 
 }
-
 
 

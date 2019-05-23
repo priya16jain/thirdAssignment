@@ -8,10 +8,33 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Thabang Mashologu: ECE 2019: CFP Now Open!</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6702 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/thabang-mashologu/ece-2019-cfp-now-open</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;EclipseCon Europe is the leading conference for developers, architects, and open source business leaders to learn about Eclipse technologies, share best practices, and more. Taking in place in Ludwigsburg, Germany, October 21-24, 2019, ECE 2019 is our biggest event of the year and connects the Eclipse ecosystem and the industry’s leading minds under one roof. We are pleased to once again co-locate with the OSGi Alliance Community Event, adding more breadth and expertise to the program.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The ECE 2019 Call for Papers is now open. Please visit the &lt;a href=&quot;https://www.eclipsecon.org/europe2019/cfp&quot;&gt;CFP page&lt;/a&gt; for information on how to submit your talk. This year, the early-bird submission deadline is July 1 and the final submission deadline is July 15. &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;If you have an idea for a talk that will educate and inspire the Eclipse community, we would love to hear from you! &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipsecon&quot;&gt;EclipseCon&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/community&quot;&gt;Community&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/cfp&quot;&gt;cfp&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 22 May 2019 09:47:54 +0000</pubDate>
+</item>
+<item>
 	<title>Eclipse Announcements: Cloud Native Java Innovation at the Eclipse Foundation</title>
 	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/aBdlEIvQ0Ik/cloud-native-java-innovation-eclipse-foundation</guid>
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/aBdlEIvQ0Ik/cloud-native-java-innovation-eclipse-foundation</link>
 	<description>The world's leading technology vendors, including Fujitsu, IBM, Microsoft, Oracle, Red Hat, SAP, and Tomitribe, are collaborating at the Eclipse Foundation to advance enterprise Java technologies to support the migration of mission-critical applications to the cloud.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/aBdlEIvQ0Ik&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Tue, 21 May 2019 13:30:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: ECE 2019: CFP Now Open!</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/VZlk1gBdWVs/ece-2019-cfp-now-open</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/VZlk1gBdWVs/ece-2019-cfp-now-open</link>
+	<description>The ECE 2019 Call for Papers is now open. The early-bird deadline is July 1 and final submission is July 15.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/VZlk1gBdWVs&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Tue, 21 May 2019 13:30:00 +0000</pubDate>
 </item>
 <item>
@@ -365,130 +388,6 @@
 &lt;p&gt;&lt;b&gt;How will specs be updated beyond Jakarta EE 8?&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;Jakarta EE specifications will be updated according to the approved Jakarta EE Specification Process (JESP). The actual enhancements will be determined by the community who participate in those specification projects.&lt;/p&gt;</description>
 	<pubDate>Fri, 03 May 2019 10:00:07 +0000</pubDate>
-</item>
-<item>
-	<title>Tanja Obradovic: Jakarta EE Community Engagement</title>
-	<guid isPermaLink="false">https://blogs.eclipse.org/6695 at https://blogs.eclipse.org</guid>
-	<link>https://blogs.eclipse.org/post/tanja-obradovic/jakarta-ee-community-engagement</link>
-	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt; &lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/NUmtGPqGwhz-c6FEc7h9imIdBlir0aVqUsXTAdtzG44uCm3qUxkHnuPxXVdS20weW4iJLpFtNPCyW1xvtAJsWf4_X-AuSnAZV14SeLwOTeJCBffRyqO4mmEa3TkNuRvL6nZKtN_h&quot; style=&quot;height: 223px; width: 624px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The intention of the blog is to list all the ways we currently (May 2019) engage with the community.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Social media&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Jakarta EE on social media&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;Twitter: @JakartaEE&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;Facebook: Jakarta EE&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;LinkedIn Group: Jakarta.EE&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Mailing lists&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Subscribe to our mailing-lists&lt;a href=&quot;https://jakarta.ee/connect/&quot;&gt; https://jakarta.ee/connect/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;mailto:jakarta.ee-community@eclipse.org&quot;&gt;jakarta.ee-community@eclipse.org&lt;/a&gt;&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;http:// jakarta.ee-wg@eclipse.org&quot;&gt;jakarta.ee-wg@eclipse.org &lt;/a&gt;&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Note: people involved in a specific project have additional mailing lists available to them.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Newsletter / Blogs / emails&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Eclipse Newsletter&lt;/em&gt; - while the EF newsletter occurs monthly, once a quarter the newsletter is dedicated to Jakarta EE&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Jakarta Blogs&lt;/em&gt; - &lt;a href=&quot;https://jakartablogs.ee/&quot;&gt;https://jakartablogs.ee/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;In addition to the above Jakarta blogs that are covering all Java Cloud related topics, we are adding the following&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;New &lt;/strong&gt;community &lt;u&gt;blogs on “how are you involved with Jakarta EE”&lt;/u&gt; - &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1JflN_xJ9d5ZWu5VUbDV9Spj7mc8WuPGMfd6EZgabXz0/edit?usp=sharing&quot;&gt;sign up sheet to the community, ideal frequency bi-weekly blogs&lt;/a&gt;, we’d  like to ensure we promote via Eclipse Foundation and other members marketing channels&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;New &lt;/strong&gt;&lt;u&gt;monthly update emails&lt;/u&gt; to &lt;a href=&quot;mailto:jakarta.ee-community@eclipse.org&quot;&gt;jakarta.ee-community@eclipse.org&lt;/a&gt;, highlighting news from the various calls, Eclipse Foundation to the community&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Meetings&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Jakarta Tech Talks &lt;/em&gt;- open to community &lt;a href=&quot;mailto:jakarta.ee-community@eclipse.org&quot;&gt;jakarta.ee-community@eclipse.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://www.meetup.com/jakartatechtalks_/&quot;&gt;Jakarta Tech Talk MeetUp Link &lt;/a&gt;&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;Monthly occurrence, last week of a month, usually Tuesday&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/19AfvCUdScUHwJejMYg370tum5mi7zI4bvkZczcQXiUM/edit?usp=sharing&quot;&gt;Jakarta Tech Talk schedule and talks suggestions spreadsheet&lt;/a&gt; - please sign up / propose a talk&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;This is a live stream with recording available on youtube&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;30-40 min technical talk by the community&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;This is also an opportunity for 10-15 min update on Jakarta EE from Eclipse Foundation&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Jakarta EE Update&lt;/em&gt; (formerly: Jakarta EE WG) calls - open to WG &lt;a href=&quot;http:// jakarta.ee-wg@eclipse.org&quot;&gt;jakarta.ee-wg@eclipse.org &lt;/a&gt; and wider community  &lt;a href=&quot;mailto:jakarta.ee-community@eclipse.org&quot;&gt;jakarta.ee-community@eclipse.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;The meeting invite is in the new public calendar &lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt;Jakarta EE Community Calendar &lt;/a&gt;&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;This is a monthly occurrence, every second Wednesday of the month (avoiding the same week as Jakarta Tech Talks)&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;This meeting is to be prepared and organized by the Jakarta EE Working Group members and &lt;a href=&quot;https://docs.google.com/document/d/1U81TZ2F_nhg6WxoE1VnpUUEQ09r8SXWpaN3hf3wiTWQ/edit?usp=sharing&quot;&gt;agenda to be shared with the community &lt;/a&gt;prior to the call&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ul&gt;
-	&lt;li dir=&quot;ltr&quot;&gt;
-	&lt;p dir=&quot;ltr&quot;&gt;Use the time slot for occasional updates from Eclipse Foundation and strategic members (Executive Director and panel)  - Jakarta Town Hall&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Jakarta Town Hall&lt;/em&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;We had 2 very successful instances of town hall meetings - first at EclipseCon Europe 2018 and A year in review in late January 2019&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;EF organized Events and Conferences&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;JakartaOne Live - virtual one-day event, targeting users and adopters. Planned for the second week of September 2019.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;EclipseCon Europe - 4-day Eclipse event, with dedicated Cloud Native Java track, community day event scheduled, likely Jakarta Town Hall.  Scheduled for October 21-24, 2019.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakartaee&quot;&gt;#JakartaEE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/opensource&quot;&gt;#OpenSource&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/community-0&quot;&gt;#community&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/community-engagement&quot;&gt;#community-engagement&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/get-involved&quot;&gt;#get-involved&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Thu, 02 May 2019 17:35:40 +0000</pubDate>
-</item>
-<item>
-	<title>Donald Raab: Code Duplication</title>
-	<guid isPermaLink="false">https://medium.com/p/1e1f759a7fe3</guid>
-	<link>https://medium.com/@donraab/code-duplication-1e1f759a7fe3?source=rss-df39b86e9f04------2</link>
-	<description>&lt;p&gt;Duplicate code makes me itch, until I scratch it away.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*fLJUnvCEnjFcNLhc5Wbgqg.jpeg&quot; /&gt;Itchy scratchy hay!&lt;/figure&gt;&lt;h3&gt;I hate code duplication&lt;/h3&gt;&lt;p&gt;Nothing bothers me quite like code duplication. I get an unbearable itch every time I spot some duplication in a code base. The only way to make the itch go away is to find a suitable way to remove the duplication.&lt;/p&gt;&lt;p&gt;I am always reminded of this quote from a &lt;a href=&quot;https://groups.yahoo.com/neo/groups/testdrivendevelopment/conversations/topics/185?viscount=100&quot;&gt;Yahoo Groups post from Ryan King&lt;/a&gt; many years ago when I spot code duplication.&lt;/p&gt;&lt;blockquote&gt;So, duplication sucks. The more rabidly a person hates duplication, the more I trust their opinions on managing information. A programmer, upon noticing some redundancy, should be thrown into a panic, begin hyperventilating, and stammer something about “¡El diablo! !El diablo está en mi software!”.&lt;/blockquote&gt;&lt;blockquote&gt;— Ryan King&lt;/blockquote&gt;&lt;p&gt;So what can we do when we find code duplication? We can learn ways to remove it. Google and StackOverflow are great resources for finding answers to solving many common programming problems. They can be your first port of call for discovering and learning new APIs that may help reduce some of the duplicate code you may have written previously.&lt;/p&gt;&lt;h3&gt;Simple patterns of duplication&lt;/h3&gt;&lt;p&gt;Sometimes code duplication is easy to spot and to remove. I will start by describing some very simple common patterns of duplication I spot in code bases all the time.&lt;/p&gt;&lt;h4&gt;Boolean Test Pattern&lt;/h4&gt;&lt;p&gt;Testing a boolean value and returning true or false. I’ve seen this pattern of code more than you might imagine over the years.&lt;/p&gt;&lt;pre&gt;public boolean isSomething()&lt;br /&gt;{&lt;br /&gt;    if (!this.calculateSomeBooleanValue())&lt;br /&gt;    {&lt;br /&gt;        return true;&lt;br /&gt;    }&lt;br /&gt;    else&lt;br /&gt;    {&lt;br /&gt;        return false;&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Write this instead.&lt;/p&gt;&lt;pre&gt;public boolean isSomething()&lt;br /&gt;{&lt;br /&gt;    return !this.calculateSomeBooleanValue();&lt;br /&gt;}&lt;/pre&gt;&lt;h4&gt;Collection Factory Pattern&lt;/h4&gt;&lt;p&gt;Here’s another simple pattern that can be fixed easily. This kind of code is very commonly written in test cases. It is important to address code duplication issues across your entire code base, including tests.&lt;/p&gt;&lt;pre&gt;List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();&lt;br /&gt;list.add(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;);&lt;br /&gt;list.add(&lt;strong&gt;&quot;two&quot;&lt;/strong&gt;);&lt;br /&gt;list.add(&lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;/pre&gt;&lt;p&gt;This code can be replaced as follows using Eclipse Collections &lt;a href=&quot;https://medium.com/@donraab/as-a-matter-of-factory-part-1-mutable-75cc2c5d72d9&quot;&gt;mutable factory pattern&lt;/a&gt;.&lt;/p&gt;&lt;pre&gt;List&amp;lt;String&amp;gt; list = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;/pre&gt;&lt;p&gt;Here’s an answer on StackOverflow that show different &lt;a href=&quot;https://stackoverflow.com/questions/1005073/initialization-of-an-arraylist-in-one-line/28183168#28183168&quot;&gt;ways to initialize a List, Set, and Bag in one line with Eclipse Collections&lt;/a&gt;.&lt;/p&gt;&lt;h4&gt;Unmodifiable Static Collection Initializer Pattern&lt;/h4&gt;&lt;p&gt;The following code used to be common in Java versions prior to Java 9, for creating a static unmodifiable List.&lt;/p&gt;&lt;pre&gt;public static final List&amp;lt;String&amp;gt; &lt;em&gt;LIST&lt;/em&gt;;&lt;br /&gt;&lt;br /&gt;static&lt;br /&gt;{&lt;br /&gt;    List&amp;lt;String&amp;gt; newList = new ArrayList&amp;lt;&amp;gt;();&lt;br /&gt;    newList.add(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;);&lt;br /&gt;    newList.add(&lt;strong&gt;&quot;two&quot;&lt;/strong&gt;);&lt;br /&gt;    newList.add(&lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;br /&gt;    &lt;em&gt;LIST &lt;/em&gt;= Collections.&lt;em&gt;unmodifiableList&lt;/em&gt;(newList);&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;This can be written more simply as follows using plain old Java.&lt;/p&gt;&lt;pre&gt;public static final List&amp;lt;String&amp;gt; &lt;strong&gt;&lt;em&gt;LIST &lt;/em&gt;&lt;/strong&gt;=&lt;br /&gt;        Collections.&lt;em&gt;unmodifiableList&lt;/em&gt;(&lt;br /&gt;                Arrays.&lt;em&gt;asList&lt;/em&gt;(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;));&lt;/pre&gt;&lt;p&gt;This can also be replaced as follows using Eclipse Collections.&lt;/p&gt;&lt;pre&gt;public static final List&amp;lt;String&amp;gt; LIST =&lt;br /&gt;        Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;).asUnmodifiable();&lt;/pre&gt;&lt;p&gt;As of Java 9, you can also write the following. The method List.of() returns an unmodifiable List.&lt;/p&gt;&lt;pre&gt;public static final List&amp;lt;String&amp;gt; LIST = &lt;br /&gt;        List.&lt;em&gt;of&lt;/em&gt;(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;/pre&gt;&lt;p&gt;You can also use an ImmutableList from Eclipse Collections if you want to have a contractually immutable interface like ImmutableList which has no mutating methods.&lt;/p&gt;&lt;pre&gt;public static final ImmutableList&amp;lt;String&amp;gt; LIST = &lt;br /&gt;        Lists.&lt;strong&gt;&lt;em&gt;immutable&lt;/em&gt;&lt;/strong&gt;.with(&lt;strong&gt;&quot;one&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;/pre&gt;&lt;h4&gt;Static Map Initializer Pattern&lt;/h4&gt;&lt;p&gt;Initializing a static Map can be a bit more challenging, if you have more than three or four key/value pairs in the Map.&lt;/p&gt;&lt;pre&gt;public static final Map&amp;lt;Integer, String&amp;gt; &lt;strong&gt;&lt;em&gt;MAP&lt;/em&gt;&lt;/strong&gt;;&lt;br /&gt;&lt;br /&gt;static&lt;br /&gt;{&lt;br /&gt;    Map&amp;lt;Integer, String&amp;gt; newMap = new HashMap&amp;lt;&amp;gt;();&lt;br /&gt;    newMap.put(1, &lt;strong&gt;&quot;one&quot;&lt;/strong&gt;);&lt;br /&gt;    newMap.put(2, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;);&lt;br /&gt;    newMap.put(3, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;);&lt;br /&gt;    newMap.put(4, &lt;strong&gt;&quot;four&quot;&lt;/strong&gt;);&lt;br /&gt;    newMap.put(5, &lt;strong&gt;&quot;five&quot;&lt;/strong&gt;);&lt;br /&gt;    &lt;strong&gt;&lt;em&gt;MAP &lt;/em&gt;&lt;/strong&gt;= Collections.&lt;em&gt;unmodifiableMap&lt;/em&gt;(newMap);&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Refactored to use an Eclipse collections unmodifiable map.&lt;/p&gt;&lt;pre&gt;public static final Map&amp;lt;Integer, String&amp;gt; &lt;strong&gt;&lt;em&gt;MAP &lt;/em&gt;&lt;/strong&gt;=&lt;br /&gt;        Maps.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.&amp;lt;Integer, String&amp;gt;empty()&lt;br /&gt;                .withKeyValue(1, &lt;strong&gt;&quot;one&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(2, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(3, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(4, &lt;strong&gt;&quot;four&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(5, &lt;strong&gt;&quot;five&quot;&lt;/strong&gt;)&lt;br /&gt;                .asUnmodifiable();&lt;/pre&gt;&lt;p&gt;Refactored to use an Eclipse collections ImmutableMap which also has no mutating methods in its interface.&lt;/p&gt;&lt;pre&gt;public static final ImmutableMap&amp;lt;Integer, String&amp;gt; &lt;strong&gt;&lt;em&gt;MAP &lt;/em&gt;&lt;/strong&gt;=&lt;br /&gt;        Maps.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.&amp;lt;Integer, String&amp;gt;empty()&lt;br /&gt;                .withKeyValue(1, &lt;strong&gt;&quot;one&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(2, &lt;strong&gt;&quot;two&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(3, &lt;strong&gt;&quot;three&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(4, &lt;strong&gt;&quot;four&quot;&lt;/strong&gt;)&lt;br /&gt;                .withKeyValue(5, &lt;strong&gt;&quot;five&quot;&lt;/strong&gt;)&lt;br /&gt;                .toImmutable();&lt;/pre&gt;&lt;p&gt;Here’s a an answer on StackOverflow that shows various &lt;a href=&quot;https://stackoverflow.com/questions/507602/how-can-i-initialise-a-static-map/13943037#13943037&quot;&gt;ways to initialize a static map with Eclipse Collections&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;Iteration Patterns&lt;/h3&gt;&lt;p&gt;One of the primary reasons I started building &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; was that I would see developers writing the same for-loops over and over again. Developers were constantly reimplementing collection iteration patterns in Java. I saw code duplication everywhere! Developers did this prior to Java 8 because the iteration patterns available to Java developers then were limited to what could be found on the Collections utility class. Eclipse Collections has been in development and used in production since JDK 1.4. &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; has been my preferred solution for removing duplicate iteration pattern code for the past fifteen years in Java.&lt;/p&gt;&lt;h4&gt;Filter Pattern&lt;/h4&gt;&lt;p&gt;Prior to Java 8, the following was the usual way of filtering a source collection to a target collection based on some condition.&lt;/p&gt;&lt;pre&gt;List&amp;lt;Integer&amp;gt; source = Arrays.asList(1, 2, 3, 4, 5);&lt;br /&gt;List&amp;lt;Integer&amp;gt; target = new ArrayList&amp;lt;&amp;gt;();&lt;br /&gt;for (Integer value : source)&lt;br /&gt;{&lt;br /&gt;    if (value % 2 == 0)&lt;br /&gt;    {&lt;br /&gt;        target.add(value);&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Here’s the same code refactored using the Eclipse Collections select method.&lt;/p&gt;&lt;pre&gt;MutableList&amp;lt;Integer&amp;gt; source = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(1, 2, 3, 4, 5);&lt;br /&gt;MutableList&amp;lt;Integer&amp;gt; target = source.select(each -&amp;gt; each % 2 ==0);&lt;/pre&gt;&lt;p&gt;Here’s an &lt;a href=&quot;https://stackoverflow.com/questions/122105/what-is-the-best-way-to-filter-a-java-collection/12573823#12573823&quot;&gt;answer&lt;/a&gt; on StackOverflow to the question of “What is the best way to filter a Java Collection?”&lt;/p&gt;&lt;h4&gt;Transform Pattern&lt;/h4&gt;&lt;p&gt;Prior to Java 8, the following was the typical way of converting one collection type to another.&lt;/p&gt;&lt;pre&gt;List&amp;lt;Integer&amp;gt; source = Arrays.asList(1, 2, 3, 4, 5);&lt;br /&gt;List&amp;lt;String&amp;gt; target = new ArrayList&amp;lt;&amp;gt;();&lt;br /&gt;for (Integer value : source)&lt;br /&gt;{&lt;br /&gt;    target.add(value.toString());&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Here’s the same code refactored using the Eclipse Collections collect method.&lt;/p&gt;&lt;pre&gt;MutableList&amp;lt;Integer&amp;gt; source = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(1, 2, 3, 4, 5);&lt;br /&gt;MutableList&amp;lt;String&amp;gt; target = source.collect(Object::toString);&lt;/pre&gt;&lt;h4&gt;Any / All / None Patterns&lt;/h4&gt;&lt;p&gt;Prior to Java 8, you would either use a break statement with a boolean variable or a direct return from inside an if statement to see if any, all, or none of the elements of a collection match a given condition.&lt;/p&gt;&lt;h4&gt;Any Pattern&lt;/h4&gt;&lt;pre&gt;List&amp;lt;Integer&amp;gt; source = Arrays.asList(1, 2, 3, 4, 5);&lt;br /&gt;boolean &lt;strong&gt;anyEvens &lt;/strong&gt;= false;&lt;br /&gt;for (Integer value : source)&lt;br /&gt;{&lt;br /&gt;    if (value % 2 == 0)&lt;br /&gt;    {&lt;br /&gt;        &lt;strong&gt;anyEvens &lt;/strong&gt;= true;&lt;br /&gt;        break;&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Refactored with Eclipse Collections anySatisfy method.&lt;/p&gt;&lt;pre&gt;MutableList&amp;lt;Integer&amp;gt; source = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(1, 2, 3, 4, 5);&lt;br /&gt;boolean anyEvens = source.anySatisfy(each -&amp;gt; each % 2 == 0);&lt;/pre&gt;&lt;h4&gt;All Pattern&lt;/h4&gt;&lt;pre&gt;List&amp;lt;Integer&amp;gt; source = Arrays.asList(1, 2, 3, 4, 5);&lt;br /&gt;boolean &lt;strong&gt;allEvens &lt;/strong&gt;= true;&lt;br /&gt;for (Integer value : source)&lt;br /&gt;{&lt;br /&gt;    if (value % 2 != 0)&lt;br /&gt;    {&lt;br /&gt;        &lt;strong&gt;allEvens &lt;/strong&gt;= false;&lt;br /&gt;        break;&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Refactored with Eclipse Collections allSatisfy method.&lt;/p&gt;&lt;pre&gt;MutableList&amp;lt;Integer&amp;gt; source = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(1, 2, 3, 4, 5);&lt;br /&gt;boolean allEvens = source.allSatisfy(each -&amp;gt; each % 2 == 0);&lt;/pre&gt;&lt;h4&gt;None Pattern&lt;/h4&gt;&lt;pre&gt;List&amp;lt;Integer&amp;gt; source = Arrays.asList(1, 2, 3, 4, 5);&lt;br /&gt;boolean &lt;strong&gt;noneEvens &lt;/strong&gt;= true;&lt;br /&gt;for (Integer value : source)&lt;br /&gt;{&lt;br /&gt;    if (value % 2 == 0)&lt;br /&gt;    {&lt;br /&gt;        &lt;strong&gt;noneEvens &lt;/strong&gt;= false;&lt;br /&gt;        break;&lt;br /&gt;    }&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;Refactored with Eclipse Collections noneSatisfy method.&lt;/p&gt;&lt;pre&gt;MutableList&amp;lt;Integer&amp;gt; source = Lists.&lt;strong&gt;&lt;em&gt;mutable&lt;/em&gt;&lt;/strong&gt;.with(1, 2, 3, 4, 5);&lt;br /&gt;boolean noneEvens = source.noneSatisfy(each -&amp;gt; each % 2 == 0);&lt;/pre&gt;&lt;h4&gt;Other Iteration Patterns&lt;/h4&gt;&lt;p&gt;There are many other iteration patterns available in Eclipse Collections that can help you remove duplicate code. There are over one hundred variations of iteration patterns and other APIs available on the &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.2.0/org/eclipse/collections/api/RichIterable.html&quot;&gt;&lt;em&gt;RichIterable&lt;/em&gt;&lt;/a&gt; parent interface alone.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*Br4eQEhSsLeRZ1EVZIHhPA.png&quot; /&gt;RichIterable APIs&lt;/figure&gt;&lt;h3&gt;Sometimes code duplication is necessary&lt;/h3&gt;&lt;p&gt;Occasionally code duplication is the best available solution to solve a performance problem. A great example in Eclipse Collections is the primitive collections. Eclipse Collections has primitive collection support for Lists, Sets, Bags, Stacks and Maps for all eight primitive combinations (boolean, byte, char, double, float, int, long, short). The code to implement all of these container types is nearly identical. So if you read the code for an IntArrayList it will look eerily similar to the code in ShortArrayList and LongArrayList. What is important in cases where you want to provide library support for primitive types in Java is to leverage a code generation strategy wherever possible and to not duplicate the code by hand. With Eclipse Collections, we use the &lt;a href=&quot;https://www.stringtemplate.org/&quot;&gt;StringTemplate&lt;/a&gt; library and write templates once for each container type that are then used to generate the eight container types required to support all of the primitives.&lt;/p&gt;&lt;p&gt;In the future, if the work in &lt;a href=&quot;https://openjdk.java.net/projects/valhalla/&quot;&gt;Project Valhalla&lt;/a&gt; becomes part of a JDK release and we get support for generic specialization over primitive types, we may have new language level strategies in Java to reduce the amount of generated code we have to produce today to support primitive types. I am very excited to see how this support may potentially reduce our code duplication burden.&lt;/p&gt;&lt;h3&gt;Additional Patterns of Duplication&lt;/h3&gt;&lt;p&gt;There are a lot more patterns of duplication out there. Your IDE and various code analysis tools can sometimes help you find the obvious ones caused by copy and paste. Other times you may just need to read your code and see if you can recognize patterns where some code is going into too much detail about &lt;strong&gt;how&lt;/strong&gt; to do something (for loops are sometimes a cue). Code that is written well should tell you clearly &lt;strong&gt;what&lt;/strong&gt; it is doing, not how it is doing it.&lt;/p&gt;&lt;p&gt;Deleting duplicate code makes me feel very satisfied. It helps reduce the total cost of ownership for a an application or library. Less code to read, test, maintain, and deploy means less potential bugs to discover, debug and fix.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=1e1f759a7fe3&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Wed, 01 May 2019 03:49:42 +0000</pubDate>
 </item>
 
 </channel>
