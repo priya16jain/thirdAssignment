@@ -8,6 +8,229 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Niko Stotz: Inline Display of Error / Warning / Info Annotations in Eclipse</title>
+	<guid isPermaLink="false">https://www.nikostotz.de/blog/?p=436</guid>
+	<link>https://www.nikostotz.de/blog/inline-display-of-error-warning-info-annotations-in-eclipse/</link>
+	<description>&lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; A prototype implementation shows all error, warning, and info annotations (“bubbles” in the left ruler) in Eclipse Java editor as inline text. Thus, we don’t have to use the mouse to view the error message. The error messages update live with changes in the editor.&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;wp-image-438&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2019/05/InlineAnnotationsSmall.gif&quot; /&gt;Screencast showing the live effect&lt;/figure&gt;
+
+
+
+&lt;p&gt;I’m an avid keyboard user. If I have to touch the mouse, something is wrong. Eclise has tons of shortcuts to ease your live, and I use and enjoy them every day.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, if I had an error message in e.g. my Java file, and I couldn’t anticipate the error, I had several bad choices:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt; Opening the &lt;em&gt;Problems&lt;/em&gt; view and navigating to the current error (entries in the  Problems view are called “markers” by Eclipse)&lt;/li&gt;&lt;li&gt;Moving the mouse over the annotation in the left ruler (“annotation” in Eclipse lingo)&lt;/li&gt;&lt;li&gt;Guessing&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Not so long ago, Angelo Zerr and others implemented &lt;a href=&quot;https://github.com/angelozerr/jdt-codemining&quot;&gt;code mining&lt;/a&gt; in Eclipse. This feature displays additional information within a text file without changing the actual contents of the file. Sounds like a natural fit for my problem!&lt;/p&gt;
+
+
+
+&lt;p&gt;I first tried to implement the error code mining based on markers, (&lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=540443&quot;&gt;Bug 540443&lt;/a&gt;). This works in general. However, markers are bound to the &lt;em&gt;persisted state&lt;/em&gt; of a file, i.e. how a file is saved to disk. So they are only updated on saving.&lt;/p&gt;
+
+
+
+&lt;p&gt;Most editors in Eclipse are more interactive than that: They update their error information based on the &lt;em&gt;dirty state&lt;/em&gt; of the editor, i.e. the text that’s currently in the editor. This feels way more natural, so I tried to rewrite my error code mining based on annotations. The current prototype is shown in above’s screencast.&lt;/p&gt;
+
+
+
+&lt;p&gt;The code is attached to &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=547665&quot;&gt;Bug 547665&lt;/a&gt;. The prototype looks quite promising.&lt;/p&gt;
+
+
+
+&lt;p&gt;As above’s screencast shows, I have at least one serious issue to resolve: When the editor is saved, all code minings briefly duplicate. Thankfully, they get back to normal quickly.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+	<pubDate>Sun, 26 May 2019 22:11:09 +0000</pubDate>
+        <enclosure url="https://www.nikostotz.de/blog/wp-content/uploads/2019/05/InlineAnnotationsSmall.gif" length="2854" type="image/jpeg"/>
+</item>
+<item>
+	<title>Doug Schaefer: Going Straight to clang for WebAssembly</title>
+	<guid isPermaLink="false">https://medium.com/p/928df1484430</guid>
+	<link>https://medium.com/@dougschaefer/going-straight-to-clang-for-webassembly-928df1484430?source=rss-8f7a70438965------2</link>
+	<description>&lt;p&gt;A few years ago at EclipseCon I gave a demo of a C++ app using libSDL2 and showed how you build it with CDT and launch it for multiple platforms, my desktop, a BeagleBone running QNX, and finally in a web browser using Emscripten. I used CMake for the build system and that worked fine for the first two, but Emscripten really fought the idea of something else driving the build. I finally figured it out but it left the impression that there had to be a simpler way to build WebAssembly apps.&lt;/p&gt;&lt;p&gt;Recently with version 8 of clang, they have made the wasm target a first class citizen available with the standard distribution. I thought I’d take a look and &lt;a href=&quot;https://github.com/PetterS/clang-wasm&quot;&gt;found at least one example on github&lt;/a&gt; that showed how. Here’s a quick summary on how to get started. Be warned, though, one of the arguments is nostdlib which means this is a very barebones example. But that’s another area where I think Emscripten has gone a little to far with. More on that later.&lt;/p&gt;&lt;p&gt;To start this example is a pretty basic Fibonacci calculator, pretty standard for WebAssembly. Here’s the C++ file.&lt;/p&gt;&lt;pre&gt;#include “wasm.h”&lt;/pre&gt;&lt;pre&gt;WASM_IMPORT void log(int i);&lt;/pre&gt;&lt;pre&gt;WASM_EXPORT int fib(int i) {&lt;br /&gt;    int res = i &amp;lt;= 1 ? i : fib(i — 1) + fib(i — 2);&lt;br /&gt;    log(res);&lt;br /&gt;    return res;&lt;br /&gt;}&lt;/pre&gt;&lt;p&gt;I wanted to show C++ calling back into JavaScript so there’s a very contrived log method we import. The fib function itself is pretty basic. I’ve created a couple of macros in the wasm.h file to manage marking functions as import or export.&lt;/p&gt;&lt;pre&gt;#define WASM_EXPORT __attribute__((visibility(“default”))) \&lt;br /&gt;    extern “C”&lt;br /&gt;#define WASM_IMPORT extern “C”&lt;/pre&gt;&lt;p&gt;Since I’m writing C++ I want to make sure the compiler doesn’t mangle the names so I declare them as extern “C”. As you can see, the export also turns on the visibility of the symbol which is hidden by default in the Makefile.&lt;/p&gt;&lt;p&gt;I’m running this with node.js which has had WebAssembly support since at least version 8 that I have on my Linux box. The idea is to do some of the more computationally expensive tasks in my node server using wasm. Here’s my js file.&lt;/p&gt;&lt;pre&gt;const fs = require(‘fs’)&lt;/pre&gt;&lt;pre&gt;async function run() {&lt;br /&gt;  const buf = fs.readFileSync(‘./fib.wasm’)&lt;br /&gt;  return await WebAssembly.instantiate(buf, {&lt;br /&gt;    ‘env’: {&lt;br /&gt;      ‘log’: function(i) { console.log(`log: ${i}`) }&lt;br /&gt;    }&lt;br /&gt;  })&lt;br /&gt;}&lt;/pre&gt;&lt;pre&gt;run().then(res =&amp;gt; {&lt;br /&gt;  const { fib } = res.instance.exports&lt;br /&gt;  console.log(fib(10))&lt;br /&gt;})&lt;/pre&gt;&lt;p&gt;It simply loads up the wasm file and instantiates it passing in the log function. When that’s complete, I extract my fib function from the exports and run it. You should see the output of the log function (more times that I was expecting at least), then the result, 55.&lt;/p&gt;&lt;p&gt;As with most things C++, the magic is actually in the Makefile.&lt;/p&gt;&lt;pre&gt;CXX = $(HOME)/wasm/clang-8/bin/clang&lt;br /&gt;CXXFLAGS = \&lt;br /&gt;    -Wall \&lt;br /&gt;    --target=wasm32 \&lt;br /&gt;    -Os \&lt;br /&gt;    -flto \&lt;br /&gt;    -nostdlib \&lt;br /&gt;    -fvisibility=hidden \&lt;br /&gt;    -std=c++14 \&lt;br /&gt;    -ffunction-sections \&lt;br /&gt;    -fdata-sections&lt;/pre&gt;&lt;pre&gt;LD = $(HOME)/wasm/clang-8/bin/wasm-ld&lt;br /&gt;LDFLAGS = \&lt;br /&gt;    --no-entry \&lt;br /&gt;    --strip-all \&lt;br /&gt;    --export-dynamic \&lt;br /&gt;    --initial-memory=131072 \&lt;br /&gt;    -error-limit=0 \&lt;br /&gt;    --lto-O3 \&lt;br /&gt;    -O3 \&lt;br /&gt;    --gc-sections&lt;/pre&gt;&lt;pre&gt;fib.wasm: fib.o&lt;br /&gt;    $(LD) $(LDFLAGS) -o $@ $&amp;lt;&lt;/pre&gt;&lt;p&gt;There’s lots of magic flags here and I have to thank the author of the example I linked above for getting me started. I’ll have to play with them to see what’s actually necessary. The key here is that it isn’t Emscripten but straight clang 8 that I downloaded from llvm.org. There’s no standard library, so don’t go and try and do a printf. You’re a bit on your own for now.&lt;/p&gt;&lt;p&gt;But that’s somewhat a conclusion I reached. Emscripten allows C++ developer to easily port their apps to run on the web. It doesn’t make the C++ developer think like a Web developer. What would be interesting to me is what it would look like if you weren’t handed those fancy libraries you get with Emscripten and really just wanted to build a web app, like a game, using the standard JavaScript APIs you get with node or the browser. I think you’d end up writing programs like an Arduino developer where you don’t have printf either…&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=928df1484430&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Fri, 24 May 2019 20:39:43 +0000</pubDate>
+</item>
+<item>
+	<title>Tanja Obradovic: Election time for Jakarta EE Working Group Committees!</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6703 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/election-time-jakarta-ee-working-group-committees</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;The Jakarta EE Working Group&lt;a href=&quot;https://www.eclipse.org/org/workinggroups/jakarta_ee_charter.php&quot;&gt; charter&lt;/a&gt; identifies three key committees to drive the various facets of the working group for which there are elected positions to be filled: the Steering Committee, the Specification Committee, and the Marketing and Brand Committee.&lt;/p&gt;
+
+&lt;p&gt;The elected positions are to represent each of the Enterprise Members, Participant Members, and Committer Members.  Note that Strategic Members each have a representative appointed to these committees.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;This way, we are announcing that the Foundation will hold elections on behalf of the working group using the proposed timetable listed below. This mimics the process used by other working groups as well as the process used by the Eclipse Foundation itself for filling the elected positions on our Board.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;All members are encouraged to consider nominating someone for the positions, and self-nominations are welcome. The period for nominations will open later this week and will run through June 4th.  Nominations may be sent to elections@eclipse.org.&lt;/p&gt;
+
+&lt;p&gt;Once nominations are closed, we will inform all working group members of the candidates and will distribute ballots via email to those eligible to vote.  The election process will follow the Eclipse “Single Transferable Vote” method, as defined in the Eclipse&lt;a href=&quot;https://www.eclipse.org/org/documents/&quot;&gt; Bylaws&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;The winning candidates will be announced on this mailing list immediately after the elections are concluded.  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Election Schedule&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Nomination period:  &lt;strong&gt;May 24 - June 4 &lt;/strong&gt;(self-nominations are welcome)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Election period: &lt;strong&gt; June 11 - June 25&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;Winning candidates announced: &lt;strong&gt; June 27&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The following positions will be filled as part of this election:&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steering Committee&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Two seats allocated for Enterprise Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Participant Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Committer Members&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Specification Committee&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Two seats allocated for Enterprise Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Participant Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Committer Members&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Marketing and Brand Committee&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Two seats allocated for Enterprise Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Participant Members&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;One seat allocated for Committer Members&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakartaee-javaee-eclipsefdn&quot;&gt;#JakartaEE #JavaEE #EclipseFdn&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Fri, 24 May 2019 10:02:19 +0000</pubDate>
+</item>
+<item>
+	<title>vert.x project: Eclipse Vert.x 3.7.1</title>
+	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-7-1</guid>
+	<link>https://vertx.io/blog/eclipse-vert-x-3-7-1</link>
+	<description>&lt;article&gt;&lt;p&gt;We have just released Vert.x 3.7.1, a bug fix release of Vert.x 3.7.x and a few small features.&lt;/p&gt;
+&lt;p&gt;Since the release of Vert.x 3.7.0, quite a few bugs have been reported. We would like to thank you all for reporting these issues.&lt;/p&gt;
+&lt;p&gt;In addition of bug fixes, this release prepares the ground for Vert.x 4 with a few enhancements and deprecations.&lt;/p&gt;
+&lt;h3 id=&quot;http-client-unix-domain-sockets&quot;&gt;HTTP client Unix Domain Sockets&lt;/h3&gt;
+&lt;p&gt;Since this release the &lt;code&gt;HttpClient&lt;/code&gt; supports &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_domain_socket&quot;&gt;Unix Domain Sockets&lt;/a&gt; when using
+Netty’s native transports, which can be really useful if you need to connect to a local daemon such as Docker’s Daemon:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;HttpClient httpClient = vertx.createHttpClient();
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Only available on BSD and Linux with native transport&lt;/span&gt;
+SocketAddress addr = SocketAddress.domainSocketAddress(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/var/tmp/myservice.sock&quot;&lt;/span&gt;);
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Send request to the server&lt;/span&gt;
+httpClient.request(HttpMethod.GET, addr, &lt;span class=&quot;hljs-number&quot;&gt;8080&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;localhost&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;/&quot;&lt;/span&gt;, resp -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// Process response&lt;/span&gt;
+}).end();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;http-client-websocket-connect-revisited&quot;&gt;HTTP client WebSocket connect revisited&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;HttpClient&lt;/code&gt; WebSocket methods have been revisited, indeed these methods were lacking of usability in general or
+with vertx-rx due to the optional error handling:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;HttpClient client = vertx.createHttpClient();
+client.websocket(&lt;span class=&quot;hljs-number&quot;&gt;80&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;example.com&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;/&quot;&lt;/span&gt;, websocket -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// connected&lt;/span&gt;
+});
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// or&lt;/span&gt;
+
+client.websocket(&lt;span class=&quot;hljs-number&quot;&gt;80&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;example.com&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;/&quot;&lt;/span&gt;, websocket -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// connected&lt;/span&gt;
+}, err -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// handle error&lt;/span&gt;
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The new &lt;code&gt;webSocket&lt;/code&gt; method provides now the best developer experience for connecting a WebSocket:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;HttpClient client = vertx.createHttpClient();
+client.webSocket(&lt;span class=&quot;hljs-number&quot;&gt;80&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;example.com&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;/&quot;&lt;/span&gt;, ar -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// connected&lt;/span&gt;
+  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// handler error&lt;/span&gt;
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With RxJava2, you can use now:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;HttpClient client = vertx.createHttpClient();
+Single single = client.rxWebSocket(&lt;span class=&quot;hljs-number&quot;&gt;80&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;example.com&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;/&quot;&lt;/span&gt;);
+single.subscribe(
+  ws -&amp;gt; {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// connected&lt;/span&gt;
+  },
+  err -&amp;gt; {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// handle error&lt;/span&gt;
+  });&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;vert-x-rx-usability-improvements&quot;&gt;Vert.x Rx usability improvements&lt;/h3&gt;
+&lt;p&gt;As you may know, the &lt;a href=&quot;http://vertx.io/docs/vertx-rx/java2/#_rxified_api&quot;&gt;Vert.x &lt;em&gt;Rxified&lt;/em&gt; API&lt;/a&gt; is generated from the bare Vert.x API.&lt;/p&gt;
+&lt;p&gt;In this release, &lt;code&gt;vertx-codegen&lt;/code&gt; has been improved to determine if an API object is an &lt;code&gt;Iterable&lt;/code&gt;, &lt;code&gt;Iterator&lt;/code&gt;, or &lt;code&gt;Function&lt;/code&gt;.
+Then its &lt;em&gt;Rxified&lt;/em&gt; equivalent will be an &lt;code&gt;Iterable&lt;/code&gt;, &lt;code&gt;Iterator&lt;/code&gt;, or &lt;code&gt;Function&lt;/code&gt; too.&lt;/p&gt;
+&lt;p&gt;Let’s take an example.
+The Vert.x &lt;code&gt;MultiMap&lt;/code&gt; class represents a multi-map of &lt;code&gt;String&lt;/code&gt; keys to a list of &lt;code&gt;String&lt;/code&gt; values.
+It’s useful to represent things like HTTP headers and parameters which allow multiple values for keys.&lt;/p&gt;
+&lt;p&gt;Since the bare &lt;code&gt;io.vertx.core.MultiMap&lt;/code&gt; implements &lt;code&gt;Iterable&amp;gt;&lt;/code&gt;, you can iterate through the content with a &lt;code&gt;for-each&lt;/code&gt; loop.
+Starting with 3.7.1, the same is possible with the &lt;em&gt;Rxified&lt;/em&gt; version:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;io.vertx.reactivex.core.MultiMap headers = request.headers();
+&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (Entry header : headers) {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// inspect header  &lt;/span&gt;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, for advanced transformations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Flowable&amp;gt; headers = Flowable.fromIterable(request.headers());&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;graphiql-ide&quot;&gt;GraphiQL IDE&lt;/h3&gt;
+&lt;p&gt;Vert.x 3.7.0 added support for building &lt;a href=&quot;https://vertx.io/docs/vertx-web-graphql/java/&quot;&gt;GraphQL servers&lt;/a&gt; with Vert.x Web and &lt;a href=&quot;http://graphql-java.com/&quot;&gt;GraphQL-Java&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In 3.7.1, the GraphQL handler can be configured to expose the GraphiQL IDE:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;GraphQLHandlerOptions options = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; GraphQLHandlerOptions()
+  .setGraphiQLOptions(&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; GraphiQLOptions()
+    .setEnabled(&lt;span class=&quot;hljs-keyword&quot;&gt;true&lt;/span&gt;)
+  );
+
+router.route(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/graphql&quot;&lt;/span&gt;).handler(GraphQLHandler.create(graphQL, options));&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;vert-x-3-8-0-is-the-next-release&quot;&gt;Vert.x 3.8.0 is the next release&lt;/h3&gt;
+&lt;p&gt;The next version of Vert.x will be 3.8 and targets end of June / early July with the following themes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introducing a Promise interface to be used instead of Future in a couple of places of the codebase such as &lt;code&gt;Verticle&lt;/code&gt; start or
+&lt;code&gt;executeBlocking&lt;/code&gt;. The goal is to move the completion part in Vert.x 4 from &lt;code&gt;Future&lt;/code&gt; to &lt;code&gt;Promise&lt;/code&gt; which becomes the object to be
+completed and &lt;code&gt;Future&lt;/code&gt; is a view that is consumed by clients&lt;/li&gt;
+&lt;li&gt;Json Pointer support&lt;/li&gt;
+&lt;li&gt;The new SQL client will be released as tech preview (until v4)&lt;/li&gt;
+&lt;li&gt;RedisPool as tech preview (until v4) bring back connection management, lazy reconnect and scaling to all client modes (Single, Sentinel and Cluster)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vert.x 3.7.1 release notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.7.1-Release-Notes&quot;&gt;https://github.com/vert-x3/wiki/wiki/3.7.1-Release-Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vert.x 3.7.1 deprecations and breaking changes&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.7.1-Deprecations-and-breaking-changes&quot;&gt;https://github.com/vert-x3/wiki/wiki/3.7.1-Deprecations-and-breaking-changes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The event bus client using the SockJS bridge are available from NPM, Bower and as a WebJar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;https://www.npmjs.com/package/vertx3-eventbus-client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;https://github.com/vert-x3/vertx-bus-bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;http://www.webjars.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Docker images are also available on the &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;. The Vert.x distribution is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.6.3%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.7.1/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Thabang Mashologu: ECE 2019: CFP Now Open!</title>
 	<guid isPermaLink="false">https://blogs.eclipse.org/6702 at https://blogs.eclipse.org</guid>
 	<link>https://blogs.eclipse.org/post/thabang-mashologu/ece-2019-cfp-now-open</link>
@@ -302,92 +525,6 @@
 &lt;p&gt;&lt;b&gt;When will Jakarta EE 8 be delivered?&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;The Jakarta EE Working Group intends to release final Jakarta EE 8 specifications by the fall of 2019.    This is an open community-driven effort, so there will be transparency into the process of driving the Jakarta EE 8 specifications, delivery of the Jakarta EE 8 TCKs, and Jakarta EE 8 compatible implementations.&lt;/p&gt;</description>
 	<pubDate>Wed, 08 May 2019 12:00:22 +0000</pubDate>
-</item>
-<item>
-	<title>InfoQ Eclipse feed: Eclipse and Oracle Unable to Agree on Terms for javax Package Namespace and Trademarks</title>
-	<guid isPermaLink="true">https://www.infoq.com/news/2019/05/end-of-javax-package?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=Eclipse</guid>
-	<link>https://www.infoq.com/news/2019/05/end-of-javax-package?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=Eclipse</link>
-	<description>&lt;img src=&quot;https://www.infoq.com/styles/i/logo_bigger.jpg&quot; /&gt;&lt;p&gt;The Eclipse Foundation and Oracle were unable to agree on a path forward for enhancing Java EE's javax namespace, requiring all applications to be ported to a new namespace for Jakarta EE.&lt;/p&gt; &lt;i&gt;By Erik Costlow&lt;/i&gt;</description>
-	<pubDate>Wed, 08 May 2019 05:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Wayne Beaton: Eclipse Contributor Agreement 3.0</title>
-	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=5567</guid>
-	<link>https://waynebeaton.wordpress.com/2019/05/07/eclipse-contributor-agreement-3-0/</link>
-	<description>&lt;p&gt;The &lt;a href=&quot;https://www.eclipse.org/legal/ECA.php&quot;&gt;Eclipse Contributor Agreement&lt;/a&gt; (ECA) is an agreement made by contributors certifying the work they are contributing was authored by them and/or they have the legal authority to contribute as open source under the terms of the project license.&lt;/p&gt;
-
-
-
-&lt;p&gt;The Eclipse Foundation’s IP Team has been working hard to get the various agreements that we maintain between the Eclipse Foundation and community updated. Our first milestone targeted the ECA, and we’re happy to report that a very significant number of our community members have successfully updated theirs. Today, we retired all of the rest of them. Specifically, we’ve revoked all ECAs that predate the ECA version 3.0.&lt;/p&gt;
-
-
-
-&lt;p&gt;We’re confident that we’ve managed to connect and update the ECA for everybody who still wants to be a contributor, so there should be no interruption for anybody who is actively contributing. If we missed you, you’ll be asked to sign the new ECA the next time you try to contribute. Or you can just &lt;a href=&quot;https://accounts.eclipse.org/user/eca&quot;&gt;re-sign it now&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;We’ve made some changes with the new agreements that make contributing easier, (but explaining harder). Committers who have signed the &lt;a href=&quot;https://www.eclipse.org/legal/committer_process/EclipseIndividualCommitterAgreementFinal.pdf&quot;&gt;Individual Committer Agreement&lt;/a&gt; (ICA) version 4.0 or work for a company that has signed the &lt;a href=&quot;https://www.eclipse.org/legal/committer_process/EclipseMemberCommitterAgreementFinal.pdf&quot;&gt;Member Committer and Contributor Agreement&lt;/a&gt; do not require an ECA.&lt;/p&gt;
-
-
-
-&lt;p&gt;Contact emo_records@eclipse.org if you’re having trouble with an agreement.&lt;/p&gt;</description>
-	<pubDate>Tue, 07 May 2019 21:03:58 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Update on Jakarta EE Rights to Java Trademarks</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/palr9ZeHSyY/update-jakarta-ee-rights-java-trademarks</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/palr9ZeHSyY/update-jakarta-ee-rights-java-trademarks</link>
-	<description>Summary of progress to date and implications of the agreement between Eclipse and Oracle on Jakarta EE and use of Java trademarks and the javax namespace.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/palr9ZeHSyY&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Fri, 03 May 2019 20:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Mike Milinkovich: Update on Jakarta EE Rights to Java Trademarks</title>
-	<guid isPermaLink="false">http://eclipse-foundation.blog/?p=1492</guid>
-	<link>https://eclipse-foundation.blog/2019/05/03/jakarta-ee-java-trademarks/</link>
-	<description>&lt;p&gt;&lt;b&gt;Summary of progress to date and implications of the agreement between Eclipse and Oracle on Jakarta EE and use of Java trademarks and the javax namespace.&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Introduction&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The migration of Java EE to the Eclipse Foundation has been an enormous effort on behalf of the Eclipse Foundation staff and the many contributors, committers, members, and stakeholders that are participating.&lt;/p&gt;
-&lt;p&gt;This post was reviewed and represents the consensus view of the Jakarta EE Steering Committee.&lt;/p&gt;
-&lt;p&gt;Earlier this year GlassFish 5.1 was certified at Eclipse using the Java EE 8 TCK at the Eclipse Foundation. Since then under the direction of the working group the community established a Jakarta EE Specification Process (JESP) for the evolution of the Jakarta EE specs at the Eclipse Foundation. Specification projects are being created for all of the Jakarta EE specifications. The TCK process is being refined for Jakarta EE in concert with the new Jakarta EE compatibility logo. This is all being done in support of the Jakarta EE 8 release.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Progress to Date&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Jakarta community has been busy.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Oracle contributed GlassFish and the Java EE APIs and TCKs to Jakarta EE.&lt;/li&gt;
-&lt;li&gt;The Jakarta EE Working Group was formed and supporting committees to provide governance to the community and facilitate collaboration.&lt;/li&gt;
-&lt;li&gt;Eclipse GlassFish was certified with the Java EE TCK at the Eclipse Foundation.&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&quot;https://www.eclipse.org/projects/efsp/&quot;&gt;Eclipse Foundation Specification Process&lt;/a&gt; was created, and customization created and approved for the &lt;a href=&quot;https://jakarta.ee/about/jesp/&quot;&gt;Jakarta EE Specification Process&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Specification projects are being created and work is underway now within the community to deliver the Jakarta EE 8 release later this year.&lt;/li&gt;
-&lt;li&gt;There is an initiative underway for Oracle, IBM, Red Hat and other members of the JCP to contribute their specification documents created at the JCP to Jakarta.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It had been the mutual intention of the Eclipse Foundation and Oracle to agree to terms that would allow the evolution of the javax package namespace in Jakarta EE specifications.   Unfortunately, following many months of good-faith negotiations, the Eclipse Foundation and Oracle have been unable to agree on terms of an agreement for the Eclipse Foundation community to modify the javax package namespace or to use the Java trademarks currently used in Java EE specifications.  &lt;b&gt; Instead, Eclipse and Oracle have agreed that the &lt;/b&gt;&lt;b&gt;javax&lt;/b&gt;&lt;b&gt; package namespace cannot be evolved by the Jakarta EE community. As well, Java trademarks such as the existing specification names cannot be used by Jakarta EE specifications. &lt;/b&gt; Because of the complexity and confidential nature of our negotiations, the Eclipse Foundation and Oracle have also agreed that we will not attempt to characterize here what has resulted in this outcome. It is the best outcome we could mutually achieve for the community. Some additional context is provided in the &lt;a href=&quot;https://www.eclipse.org/org/foundation/boardminutes/2019_03_26_Minutes.pdf&quot;&gt;Eclipse Foundation Board&lt;/a&gt; and &lt;a href=&quot;https://jakarta.ee/meeting_minutes/&quot;&gt;Jakarta EE Steering Committee&lt;/a&gt; meeting minutes.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What restrictions does this outcome impose on the Eclipse community?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Oracle’s Java trademarks are the property of Oracle and the Eclipse Foundation has no rights to use them.   The implications of this are as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The javax package namespace may be used within Jakarta EE specifications but may be used “as is” only.  No modification to the javax package namespace is permitted within Jakarta EE component specifications. Jakarta EE specifications that continue to use the javax package namespace must remain TCK compatible with the corresponding Java EE specifications.&lt;/li&gt;
-&lt;li&gt;Jakarta EE component specifications using the javax package namespace may be omitted entirely from future Jakarta EE Platform specifications.&lt;/li&gt;
-&lt;li&gt;Specification names must be changed from a “Java EE” naming convention to a “Jakarta EE” naming convention.  This includes acronyms such as EJB, JPA or JAX-RS.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In addition to the above, any specifications which use the javax namespace will continue to carry the certification and container requirements which Java EE has had in the past. I.e., implementations which claim compliance with any version of the Jakarta EE specifications using the javax namespace must test on and distribute containers which embed certified Java SE implementations licensed by Oracle. These restrictions do not apply to Jakarta EE specifications which do not utilize javax, including future revisions of the platform specifications which eliminate javax.&lt;/p&gt;
-&lt;p&gt;Note that the ratified Jakarta EE specifications will be available under a different license (the &lt;a href=&quot;https://www.eclipse.org/legal/efsl.php&quot;&gt;Eclipse Foundation Specification License&lt;/a&gt;). This is the reason why the Eclipse Foundation is currently asking the community to update their contributor and committer agreements.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What is next for the Jakarta EE Working Group?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Jakarta EE Working Group including Oracle will continue to do what they set out to do: namely, move Java EE to the Eclipse Foundation. The group remains committed to creating a Jakarta EE 8 specification, logoed under the Eclipse Foundation’s Jakarta trademark. Further, the group is also committed to future versions of the Jakarta EE specifications that deliver on the original promises of innovation and evolution in cloud-native Java.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What does it mean for Jakarta EE to not modify the javax package namespace?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Agreement does allow for modification and evolution under a new namespace, such as jakarta. It is expected that all future evolution and innovation will not use the javax namespace.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What happens to the Jakarta EE brand?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Jakarta EE compatibility and the Jakarta EE member logos have both been decided on by the community and published. Work is underway to deliver the branding usage guidelines and supporting trademark license agreement. We expect to see the usage of these brands later this year.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Will there be a Jakarta EE 8?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Yes. The community is working hard to deliver the Jakarta EE 8 release, which is Java EE 8 delivered from Eclipse. We expect that many application servers will certify as Jakarta EE 8 compatible.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What happens beyond Jakarta EE 8?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The guiding principle for Jakarta EE 9 will be to maximize compatibility with Jakarta EE 8 for future versions without stifling innovation.  This will most likely involve two key topics: migration of some or all of the Jakarta EE specification source to a new namespace for future evolution; means to provide backwards compatibility with javax at a binary level, allowing old applications to run on Jakarta 9 implementations with some form of build or runtime tooling.&lt;/p&gt;
-&lt;p&gt;So while there will be a point in time where future versions of specifications will have to go through a source code incompatible change with respect to the previous javax based packages, this will be a straightforward transformation.&lt;/p&gt;
-&lt;p&gt;Further plans are being evolved by the Jakarta EE community via the &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j.jakartaee-platform&quot;&gt;Jakarta EE Platform Project&lt;/a&gt;. Your comments and participation are encouraged.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What does this mean for the EE4J projects?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The specification projects need to be renamed to not use Oracle’s Java trademarks. The Jakarta community gets to decide on the new names. This is an opportunity to tighten up the naming and get a better level of consistency. The future of Eclipse Enterprise for Java (EE4J) projects will be determined by the community who participate in those specifications and open source projects.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What is next for Eclipse GlassFish?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Work is underway at the Eclipse GlassFish project running the Jakarta EE 8 TCK and being ready to support its role in the TCK for interop testing. The future of Eclipse GlassFish will be determined by the community who participate in the project.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;How will specs be updated beyond Jakarta EE 8?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Jakarta EE specifications will be updated according to the approved Jakarta EE Specification Process (JESP). The actual enhancements will be determined by the community who participate in those specification projects.&lt;/p&gt;</description>
-	<pubDate>Fri, 03 May 2019 10:00:07 +0000</pubDate>
 </item>
 
 </channel>
