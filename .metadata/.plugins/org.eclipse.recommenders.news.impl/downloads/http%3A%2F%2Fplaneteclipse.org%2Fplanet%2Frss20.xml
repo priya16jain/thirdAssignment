@@ -8,6 +8,20 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Eclipse Announcements: Statement by the Eclipse Foundation on Huawei Entity List Ruling</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/3gk5pDW6B_A/20190527-EAR.php</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/3gk5pDW6B_A/20190527-EAR.php</link>
+	<description>Open Source projects involving encryption software source code are still required to send a notice of the URL to BIS and NSA to satisfy the &quot;publicly available&quot; notice requirement in EAR § 742.15(b)&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/3gk5pDW6B_A&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 27 May 2019 14:15:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Industry leaders Red Hat, Eurotech, and Cloudera join forces at the Eclipse Foundation</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/PBKaqPusrBs/industry-leaders-red-hat-eurotech-and-cloudera-join-forces-eclipse-foundation</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/PBKaqPusrBs/industry-leaders-red-hat-eurotech-and-cloudera-join-forces-eclipse-foundation</link>
+	<description>Industry leaders Red Hat, Eurotech and Cloudera turned to the Eclipse IoT Working Group to overcome common challenges and provide their customers with an end-to-end IoT solution.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/PBKaqPusrBs&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 27 May 2019 13:45:00 +0000</pubDate>
+</item>
+<item>
 	<title>Niko Stotz: Inline Display of Error / Warning / Info Annotations in Eclipse</title>
 	<guid isPermaLink="false">https://www.nikostotz.de/blog/?p=436</guid>
 	<link>https://www.nikostotz.de/blog/inline-display-of-error-warning-info-annotations-in-eclipse/</link>
@@ -72,7 +86,7 @@
 
 &lt;p dir=&quot;ltr&quot;&gt;This way, we are announcing that the Foundation will hold elections on behalf of the working group using the proposed timetable listed below. This mimics the process used by other working groups as well as the process used by the Eclipse Foundation itself for filling the elected positions on our Board.&lt;/p&gt;
 
-&lt;p dir=&quot;ltr&quot;&gt;All members are encouraged to consider nominating someone for the positions, and self-nominations are welcome. The period for nominations will open later this week and will run through June 4th.  Nominations may be sent to elections@eclipse.org.&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot;&gt;All &lt;strong&gt;members &lt;/strong&gt;are encouraged to consider nominating someone for the positions, and self-nominations are welcome. The period for nominations will open later this week and will run through June 4th.  Nominations may be sent to elections@eclipse.org.&lt;/p&gt;
 
 &lt;p&gt;Once nominations are closed, we will inform all working group members of the candidates and will distribute ballots via email to those eligible to vote.  The election process will follow the Eclipse “Single Transferable Vote” method, as defined in the Eclipse&lt;a href=&quot;https://www.eclipse.org/org/documents/&quot;&gt; Bylaws&lt;/a&gt;.  &lt;/p&gt;
 
@@ -492,39 +506,6 @@ completed and &lt;code&gt;Future&lt;/code&gt; is a view that is consumed by clie
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/nM_0HQJ23Iw/eclipse-contributor-agreement-30</link>
 	<description>The Eclipse Foundation's IP Team has been working hard to get the various agreements that we maintain between the Eclipse Foundation and community updated.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/nM_0HQJ23Iw&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Wed, 08 May 2019 15:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Frequently Asked Questions About Jakarta EE 8</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/eUfMVflBsMM/frequently-asked-questions-about-jakarta-ee-8</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/eUfMVflBsMM/frequently-asked-questions-about-jakarta-ee-8</link>
-	<description>Have questions about Jakarta EE 8? Check out Mike Milinkovich's newest FAQ blog!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/eUfMVflBsMM&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Wed, 08 May 2019 15:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Mike Milinkovich: Frequently Asked Questions About Jakarta EE 8</title>
-	<guid isPermaLink="false">http://eclipse-foundation.blog/?p=1495</guid>
-	<link>https://eclipse-foundation.blog/2019/05/08/jakarta-ee-8-faq/</link>
-	<description>&lt;p&gt;I’d like to thank the community for the level of engagement we’ve seen in response to my &lt;a href=&quot;https://eclipse-foundation.blog/2019/05/03/jakarta-ee-java-trademarks/&quot;&gt;post&lt;/a&gt; from last week.   This post, which again represents the consensus view of the Jakarta EE Steering Committee, answers some questions about Jakarta EE 8, which is planned as the initial release of Jakarta EE, and is intended to be fully compatible with Java EE 8, including use of the javax namespace.   We thought it would be useful to reiterate the messages we have been delivering about this release.&lt;/p&gt;
-&lt;p&gt;Note that this post is &lt;b&gt;not&lt;/b&gt; about future Jakarta releases where the namespace will be changed. There is a vigorous discussion going on right now on the &lt;a href=&quot;https://accounts.eclipse.org/mailing-list/jakartaee-platform-dev&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;jakarta-platform-dev@eclipse.org&lt;/a&gt; list (&lt;a href=&quot;http://dev.eclipse.org/mhonarc/lists/jakartaee-platform-dev&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;archive&lt;/a&gt;), so if you are interested in that topic, I would suggest you participate there. We expect that it will be about a month before the Jakarta EE Spec Committee will determine the next steps in the Jakarta EE roadmap.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Will Jakarta EE 8 break existing Java EE applications that rely upon javax APIs?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;No, Jakarta EE 8 will not break existing existing Java EE applications that rely upon javax APIs.   We expect Jakarta EE 8 to be completely compatible with Java EE 8. We expect Jakarta EE 8 to specify the same javax namespace, and the same javax APIs and the same behavior as is specified in Java EE 8.    We expect that implementations that pass the Java EE 8 TCKs will also pass the Jakarta EE 8 TCKs, because the Jakarta EE 8 TCKs will be based on the same sources as the Java EE 8 TCKs. Jakarta EE 8 will not require any changes to Java EE 8 applications or their use of javax APIs.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What will Jakarta EE 8 consist of?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Jakarta EE 8 specifications will:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Be fully compatible with Java EE 8 specifications&lt;/li&gt;
-&lt;li&gt;Include the same APIs and Javadoc using the same javax namespace&lt;/li&gt;
-&lt;li&gt;Provide open source licensed Jakarta EE 8 TCKs that are based on, and fully compatible with, the Java EE 8 TCKs.&lt;/li&gt;
-&lt;li&gt;Include a Jakarta EE 8 Platform specification that will describe the same platform integration requirements as the Java EE 8 Platform specification.&lt;/li&gt;
-&lt;li&gt;Reference multiple compatible  implementations of the Jakarta EE 8 Platform when the Jakarta EE 8 specifications are released.&lt;/li&gt;
-&lt;li&gt;Provide a compatibility and branding process for demonstrating that implementations are Jakarta EE 8 compatible.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;b&gt;Will there be Jakarta EE 8 compatible implementations?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Yes.  Multiple compatible implementations of the Jakarta EE 8 Platform will be available when the Jakarta EE 8 specifications are released.  We expect that any Java EE 8 compatible implementation would also be Jakarta EE 8 compatible, and the vendors in the Jakarta EE Working Group intend to certify their Java EE 8 compatible implementations as Jakarta EE 8 compatible.  In addition, because the Jakarta EE TCKs are available under an open source license, we will “lower the bar” for other technology providers to demonstrate Jakarta EE compatibility for their implementations. The lower cost and more liberal Jakarta EE trademark licensing will allow more technology providers to leverage and strengthen the Jakarta EE brand in the Enterprise Java community.  Jakarta EE 8 will provide a new baseline for the evolution of the Jakarta EE technologies, under an open, vendor-neutral community-driven process.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;What is the process for delivery of Jakarta EE 8&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The process for delivery of Jakarta EE 8 specifications will be fully transparent and will follow the Jakarta EE Specification Process.  Expect to see in coming weeks the delivery of initial, draft Jakarta EE 8 component specifications corresponding to Java EE 8 component specifications.  These will contain Javadoc defining the relevant APIs, and TCKs for compatibility testing. To publish specification text, we need to acquire copyright licenses for this text.  We have obtained Oracle and IBM’s copyright licenses for their  contributions, and intend to obtain the remaining copyright licenses required to publish the text of the Jakarta EE 8 Platform specification, and as much as possible of the component specifications. If you contributed to the Java EE specifications at the JCP in the past, expect to be contacted by the Eclipse Foundation to provide a license to use your contributions in Jakarta EE going forward. Providing such a license will be an important step in supporting the new specification process and the Jakarta EE community.  You will see these draft specifications evolve to final specifications in an open community process. Join the specification projects and participate!&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;When will Jakarta EE 8 be delivered?&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The Jakarta EE Working Group intends to release final Jakarta EE 8 specifications by the fall of 2019.    This is an open community-driven effort, so there will be transparency into the process of driving the Jakarta EE 8 specifications, delivery of the Jakarta EE 8 TCKs, and Jakarta EE 8 compatible implementations.&lt;/p&gt;</description>
-	<pubDate>Wed, 08 May 2019 12:00:22 +0000</pubDate>
 </item>
 
 </channel>

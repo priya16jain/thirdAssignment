@@ -17,15 +17,13 @@ public class Translator {
 		// TODO: Specify your translation requirements here:
 		String fromLang = "en";
 		String toLang = "es";
+		
 		String text = "Let's have some fun!";
 
 		Translator.translate(fromLang, toLang, text);
 	}
 
-	/**
-	 * Sends out a WhatsApp message via WhatsMate WA Gateway.
-	 */
-	public static void translate(String fromLang, String toLang, String text) throws Exception {
+   public static void translate(String fromLang, String toLang, String text) throws Exception {
 		// TODO: Should have used a 3rd party library to make a JSON string from an object
 		String jsonPayload = new StringBuilder()
 				.append("{")
