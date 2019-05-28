@@ -20,12 +20,9 @@ public class WriteTranslatorExcelFile {
 
 	public static void main(String[] args) throws IOException, 
 	InvalidFormatException {
-		TestContent.add(new lang("Apple",""));
-		TestContent.add(new lang("Banana",""));
-		TestContent.add(new lang("Orange",""));
-		TestContent.add(new lang("Mango",""));
-
-		Workbook workbook = new XSSFWorkbook();
+		TestContent.add(new lang("happy times, great vibes",""));
+		
+        Workbook workbook = new XSSFWorkbook();
 		Sheet sheet = workbook.createSheet("contacts");
 
 		Font headerFont = workbook.createFont();

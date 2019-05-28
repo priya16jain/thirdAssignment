@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+
 public class Translator {
 	private static final String CLIENT_ID = "FREE_TRIAL_ACCOUNT";
 	private static final String CLIENT_SECRET = "PUBLIC_SECRET";
@@ -16,14 +18,12 @@ public class Translator {
 	public static void main(String[] args) throws Exception {
 		// TODO: Specify your translation requirements here:
 		String fromLang = "en";
-		String toLang = "es";
-		
-		String text = "Let's have some fun!";
-
-		Translator.translate(fromLang, toLang, text);
+		String toLang = "hi";
+	    XSSFSheet data = ReadTranslatorFile.getSheetValues();
+		Translator.translate(fromLang, toLang, data);
 	}
 
-   public static void translate(String fromLang, String toLang, String text) throws Exception {
+   public static void translate(String fromLang, String toLang, XSSFSheet data) throws Exception {
 		// TODO: Should have used a 3rd party library to make a JSON string from an object
 		String jsonPayload = new StringBuilder()
 				.append("{")
@@ -34,7 +34,7 @@ public class Translator {
 				.append(toLang)
 				.append("\",")
 				.append("\"text\":\"")
-				.append(text)
+				.append(data)
 				.append("\"")
 				.append("}")
 				.toString();

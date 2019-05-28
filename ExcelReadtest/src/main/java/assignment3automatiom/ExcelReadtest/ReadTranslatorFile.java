@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadTranslatorFile {
 
-	public static void main(String[] args) throws IOException {
+	public static XSSFSheet getSheetValues() throws IOException {
 
 		File src = new File(("contacts.xlsx"));
 
@@ -23,31 +23,19 @@ public class ReadTranslatorFile {
 
 		Iterator<Row> iterator = contacts.iterator();
 
-	
+
 		while (iterator.hasNext()) {
 			Row nextRow = iterator.next();
 			Iterator<Cell> cellIterator = nextRow.cellIterator();
 
 			while (cellIterator.hasNext()) {
 				Cell cell = cellIterator.next();
-
-				switch (cell.getCellType()) {
-				case Cell.CELL_TYPE_STRING:
-					System.out.print(cell.getStringCellValue());
-					break;
-				case Cell.CELL_TYPE_BOOLEAN:
-					System.out.print(cell.getBooleanCellValue());
-					break;
-				case Cell.CELL_TYPE_NUMERIC:
-					System.out.print(cell.getNumericCellValue());
-					break;
+              System.out.print(cell.toString());
 				}
-				System.out.print(" - ");
+             System.out.println();
 			}
-			System.out.println();
-		}
-      //  wb.close();
-		fis.close();
-		
-        }
+        fis.close();
+		return contacts ;
+
+	}
 }
