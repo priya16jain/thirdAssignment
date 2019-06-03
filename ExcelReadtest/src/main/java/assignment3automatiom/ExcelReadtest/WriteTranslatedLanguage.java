@@ -13,13 +13,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class WriteTranslatorExcelFile {
-
+public class WriteTranslatedLanguage {
 	private static String[] columns = { "first", "second"};
 	private static List<Lang> TestContent = new ArrayList<Lang>();
 
-	public static void main(String[] args) throws IOException,InvalidFormatException {
-		TestContent.add(new Lang("happy times, great vibes",""));
+	public static void writeLang(String tolang,String fromLang) throws IOException, 
+	InvalidFormatException {
+		TestContent.add(new Lang(tolang,fromLang));
 
 		Workbook workbook = new XSSFWorkbook();
 		Sheet sheet = workbook.createSheet("contacts");
@@ -59,6 +59,4 @@ public class WriteTranslatorExcelFile {
 		workbook.write(fileOut);
 		fileOut.close();
 	}
-
-
 }
